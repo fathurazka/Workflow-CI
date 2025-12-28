@@ -60,25 +60,11 @@ jobs:
           RUN_ID=$(ls -td MLproject/mlruns/0/*/ | head -n 1 | cut -d'/' -f4)
           echo "RUN_ID=$RUN_ID" >> $GITHUB_ENV
           echo "Latest run_id: $RUN_ID"
-      
-      # Prepare Docker build context
-      - name: Prepare Docker build context
-        run: |
-          # Create a build directory
-          mkdir -p docker-build
-          
-          # Copy the model artifacts to build context
-          cp -r MLproject/mlruns/0/$RUN_ID/artifacts/model/* docker-build/
-          
-          # Copy Dockerfile and conda.yaml
-          cp MLproject/Dockerfile docker-build/
-          cp MLproject/conda.yaml docker-build/
           
       # Build Docker Model
       - name: Build Docker Model
         run: |
-          cd docker-build
-          docker build -t msml . 
+          mlflow models build-docker --model-uri "runs:/$RUN_ID/model" --name "msml" 
 
       # Login to Docker Hub
       - name: Log in to Docker Hub
