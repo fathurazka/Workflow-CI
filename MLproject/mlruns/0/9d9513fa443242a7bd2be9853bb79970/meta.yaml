@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/Workflow-CI/Workflow-CI/MLproject/mlruns/0/9d9513fa443242a7bd2be9853bb79970/artifacts
+end_time: 1766910360548
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9d9513fa443242a7bd2be9853bb79970
+run_name: nimble-wren-871
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1766910343552
+status: 3
+tags: []
+user_id: runner
