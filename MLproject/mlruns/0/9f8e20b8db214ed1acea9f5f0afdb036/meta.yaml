@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/Workflow-CI/Workflow-CI/MLproject/mlruns/0/9f8e20b8db214ed1acea9f5f0afdb036/artifacts
+end_time: 1766988356818
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9f8e20b8db214ed1acea9f5f0afdb036
+run_name: peaceful-wasp-149
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1766988340085
+status: 3
+tags: []
+user_id: runner
